@@ -15,7 +15,9 @@ mongoose.connect(process.env.MONGO_URI, )
   .then(() => console.log("✅ MongoDB connected"))
   .catch(err => console.error("❌ MongoDB connection error:", err));
 
-
+app.get('/',(req,res)=>{
+  res.send("<h1>Hello Blog User</h1>")
+})
 
 app.post('/reactpost',async(req,res)=>{
     try {
