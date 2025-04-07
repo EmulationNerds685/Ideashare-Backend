@@ -24,7 +24,7 @@ app.post('/reactpost',async(req,res)=>{
         const newPost = new Post(req.body);
         await newPost.save();
         res.status(201).json({ message: "Post saved to MongoDB!" });
-        console.log(req.body)
+        
       } catch (error) {
         res.status(500).json({ message: "Failed to save post", error });
       }
