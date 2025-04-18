@@ -135,6 +135,11 @@ else{
  
 })
 
+app.post('/contact',(req,res)=>{
+  
+  res.send({message:"Query Received!"})
+})
+
 app.listen(port,()=>{
     console.log(`Server is Running on : http://localhost:${port}`)
 })
